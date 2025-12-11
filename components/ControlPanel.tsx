@@ -25,7 +25,7 @@ export default function ControlPanel() {
     nodes
   } = useGraph()
 
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(false)
   const [demoAlgorithm, setDemoAlgorithm] = useState<'bfs' | 'dfs'>('bfs')
   const [selectedNodeForDemo, setSelectedNodeForDemo] = useState<string>('')
 
@@ -90,7 +90,7 @@ export default function ControlPanel() {
             onChange={(e) => setAlgorithm(e.target.value as 'bfs' | 'dfs' | 'louvain')}
             className={styles.select}
           >
-            <option value="louvain">Louvain (Recomendado)</option>
+            <option value="louvain">Louvain</option>
             <option value="bfs">BFS - Breadth-First Search</option>
             <option value="dfs">DFS - Depth-First Search</option>
           </select>
