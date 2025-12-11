@@ -239,6 +239,30 @@
       "label": "Nathan",
       "lat": 28.7041,
       "lon": 77.1025
+    },
+    {
+      "id": "user_41",
+      "label": "Amanda",
+      "lat": 6.5244,
+      "lon": 3.3792
+    },
+    {
+      "id": "user_42",
+      "label": "Fábio",
+      "lat": 30.0444,
+      "lon": 31.2357
+    },
+    {
+      "id": "user_43",
+      "label": "Giovana",
+      "lat": -26.2041,
+      "lon": 28.0473
+    },
+    {
+      "id": "user_44",
+      "label": "Henrique",
+      "lat": 33.5731,
+      "lon": -7.5898
     }
   ],
   "edges": [
@@ -513,6 +537,30 @@
     {
       "source": "user_40",
       "target": "user_37"
+    },
+    {
+      "source": "user_41",
+      "target": "user_42"
+    },
+    {
+      "source": "user_41",
+      "target": "user_43"
+    },
+    {
+      "source": "user_42",
+      "target": "user_44"
+    },
+    {
+      "source": "user_43",
+      "target": "user_44"
+    },
+    {
+      "source": "user_41",
+      "target": "user_40"
+    },
+    {
+      "source": "user_42",
+      "target": "user_30"
     }
   ]
 }
