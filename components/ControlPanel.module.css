@@ -1,0 +1,398 @@
+.panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(15px);
+  padding: 24px;
+  border-radius: 12px;
+  min-width: 300px;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 1000;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: top right;
+}
+
+.panel.expanded {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.panel.collapsed {
+  transform: translateX(calc(100% + 20px));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hamburgerButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.hamburgerButton:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.hamburgerIcon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburgerIcon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburgerIcon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburgerIcon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerIcon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.panel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.fileInput {
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fileInput::file-selector-button {
+  background: #3a3a3a;
+  color: #e0e0e0;
+  border: 1px solid #4a4a4a;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.2s;
+}
+
+.fileInput::file-selector-button:hover {
+  background: #4a4a4a;
+  border-color: #5a5a5a;
+}
+
+.select {
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.select option {
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover:not(:disabled) {
+  background: #333333;
+  border-color: #4a4a4a;
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  color: #666;
+}
+
+.mockButton {
+  width: 100%;
+  padding: 10px;
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mockButton:hover {
+  background: #333333;
+  border-color: #4a4a4a;
+  transform: translateY(-1px);
+}
+
+.stats {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #4ecdc4;
+}
+
+.stats p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #ccc;
+}
+
+.help {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.help h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #4ecdc4;
+}
+
+.code {
+  font-size: 11px;
+  color: #aaa;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+.algorithmInfo {
+  margin-top: 8px;
+}
+
+.algorithmInfo details {
+  color: #ccc;
+}
+
+.algorithmInfo details summary {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  transition: all 0.2s;
+}
+
+.algorithmInfo details summary:hover {
+  background: rgba(78, 205, 196, 0.15);
+  border-color: rgba(78, 205, 196, 0.3);
+}
+
+.algorithmInfo details[open] summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+
+.algorithmInfo details > div {
+  padding: 12px;
+  background: rgba(78, 205, 196, 0.05);
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}
+
+.algorithmInfo ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.algorithmInfo li {
+  margin: 4px 0;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .panel {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    min-width: auto;
+    width: calc(100% - 20px);
+    max-height: 85vh;
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .panel.collapsed {
+    transform: translateY(-100%);
+  }
+
+  .hamburgerButton {
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .section {
+    margin-bottom: 16px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .select, .fileInput {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .button, .mockButton {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .stats {
+    padding: 12px;
+  }
+
+  .stats h3 {
+    font-size: 16px;
+  }
+
+  .stats p {
+    font-size: 13px;
+  }
+
+  .help {
+    padding: 12px;
+  }
+
+  .help h4 {
+    font-size: 13px;
+  }
+
+  .code {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .select, .fileInput, .button, .mockButton {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .stats, .help {
+    padding: 10px;
+  }
+
+  .code {
+    font-size: 9px;
+    padding: 8px;
+  }
+}
+

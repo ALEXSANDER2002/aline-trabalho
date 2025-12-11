@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "user1",
+      "label": "São Paulo",
+      "lat": -23.5505,
+      "lon": -46.6333
+    },
+    {
+      "id": "user2",
+      "label": "Rio de Janeiro",
+      "lat": -22.9068,
+      "lon": -43.1729
+    },
+    {
+      "id": "user3",
+      "label": "Brasília",
+      "lat": -15.7942,
+      "lon": -47.8822
+    },
+    {
+      "id": "user4",
+      "label": "Salvador",
+      "lat": -12.9714,
+      "lon": -38.5014
+    },
+    {
+      "id": "user5",
+      "label": "Fortaleza",
+      "lat": -3.7172,
+      "lon": -38.5433
+    },
+    {
+      "id": "user6",
+      "label": "Belo Horizonte",
+      "lat": -19.9167,
+      "lon": -43.9345
+    },
+    {
+      "id": "user7",
+      "label": "Manaus",
+      "lat": -3.1190,
+      "lon": -60.0217
+    },
+    {
+      "id": "user8",
+      "label": "Curitiba",
+      "lat": -25.4284,
+      "lon": -49.2733
+    },
+    {
+      "id": "user9",
+      "label": "Recife",
+      "lat": -8.0476,
+      "lon": -34.8770
+    },
+    {
+      "id": "user10",
+      "label": "Porto Alegre",
+      "lat": -30.0346,
+      "lon": -51.2177
+    }
+  ],
+  "edges": [
+    { "source": "user1", "target": "user2" },
+    { "source": "user1", "target": "user3" },
+    { "source": "user2", "target": "user4" },
+    { "source": "user3", "target": "user5" },
+    { "source": "user4", "target": "user6" },
+    { "source": "user5", "target": "user7" },
+    { "source": "user6", "target": "user8" },
+    { "source": "user7", "target": "user9" },
+    { "source": "user8", "target": "user10" },
+    { "source": "user1", "target": "user6" },
+    { "source": "user2", "target": "user7" },
+    { "source": "user3", "target": "user8" }
+  ]
+}
+
+
+
+
