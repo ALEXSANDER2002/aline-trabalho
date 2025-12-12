@@ -21,3 +21,5 @@ export type AlgorithmType = 'bfs' | 'dfs' | 'louvain'
 
 
 
+
+

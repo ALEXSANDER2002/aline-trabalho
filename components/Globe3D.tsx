@@ -12,9 +12,9 @@ declare global {
 
 // Gerar cores para comunidades (função auxiliar fora do componente)
 const getCommunityColor = (communityId: number, hasCommunities: boolean = false) => {
-  // Se não há comunidades detectadas, usar cor padrão (Branco)
+  // Se não há comunidades detectadas, usar cor padrão (Azul vibrante)
   if (!hasCommunities || communityId === undefined || communityId === null) {
-    return '#ffffff'
+    return '#3b82f6'
   }
 
   // Paleta de cores moderna e vibrante (Tailwind-inspired)
@@ -540,8 +540,8 @@ export default function Globe3D() {
               drawOutline = false
               glowOpacity = 0.5
             } else {
-              // Sem comunidades - usar cor branca padrão, sem borda
-              finalColor = '#ffffff'
+              // Sem comunidades - usar cor azul padrão, sem borda
+              finalColor = '#3b82f6'
               interiorOpacity = 0.85
               outlineWidth = 0
               drawOutline = false
@@ -675,7 +675,7 @@ export default function Globe3D() {
               }
             } else {
               // Sem comunidades detectadas ou nós sem comunidade - usar cor padrão
-              lineColorHex = '#ffffff' // Branco
+              lineColorHex = '#3b82f6' // blue-500 (azul, não preto)
               lineOpacity = 0.6
               lineWidth = 2.5
             }
